@@ -1,9 +1,11 @@
 import numpy as np
+import os, subprocess, time, signal
 import csv
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
-
+import logging
+logger = logging.getLogger(__name__)
 
 def C(x):
     return np.cos(x)
@@ -26,7 +28,7 @@ def body_to_earth_frame(ii, jj, kk):
     return np.transpose(earth_to_body_frame(ii, jj, kk))
 
 
-class PhysicsSimEnv(gym.Env):
+class PhysicssimEnv(gym.Env, utils.EzPickle):
   metadata = {'render.modes': ['human']}
 
   def __init__(self, init_pose=None, init_velocities=None, init_angle_velocities=None, runtime=5.):
