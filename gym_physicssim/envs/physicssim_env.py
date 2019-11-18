@@ -32,7 +32,7 @@ class PhysicssimEnv(gym.Env, utils.EzPickle):
   metadata = {'render.modes': ['human']}
 
   def __init__(self, init_pose=None, init_velocities=None, init_angle_velocities=None):
-    super(PhysicsSim, self).__init__(init_pose=None, init_velocities=None, init_angle_velocities=None)
+    super(Physicssim, self).__init__(init_pose=None, init_velocities=None, init_angle_velocities=None)
     self.init_pose = init_pose
     self.init_velocities = init_velocities
     self.init_angle_velocities = init_angle_velocities
