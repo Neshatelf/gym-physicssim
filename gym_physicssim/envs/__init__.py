@@ -1,4 +1,4 @@
-from gym_physicssim.envs.physicssim_env import PhysicsSimEnv
+from gym_physicssim.envs.physicssim_env import PhysicssimEnv
 
 
 
